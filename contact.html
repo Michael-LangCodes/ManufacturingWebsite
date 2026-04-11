@@ -44,29 +44,57 @@
 							<div class="col-12">
 
 								<!-- Main Content -->
-									<div class = 'contactheaderwrap'>
-										<h2 id = 'contactheader'>We are here to help you with any of your structural steel needs. Reach out about your project and 
+									<div class="contact-header-wrap">
+										<h2 id="contact-header">We are here to help you with any of your structural steel needs. Reach out about your project and 
 											see how we can support!
 										</h2>
 									</div>
-									<section>
-										<h1 class="formh1">Contact Us</h1>
-										<form id="contactForm">
-											<label class = "labelform" for="name">Name</label>
-											<input type="text" id="name" name="name" required />
+									<section class="contact-section">
+										<div class="contact-form-container">
+											<h1 class="form-title">Contact Us</h1>
+											<form id="contactForm" class="modern-form" novalidate>
+												<div class="form-group">
+													<label class="form-label" for="name">
+														<span class="label-text">Name</span>
+														<input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name" />
+														<span class="focus-border"></span>
+													</label>
+												</div>
 
+												<div class="form-group">
+													<label class="form-label" for="email">
+														<span class="label-text">Email</span>
+														<input type="email" id="email" name="email" placeholder="Enter your email address" required autocomplete="email" />
+														<span class="focus-border"></span>
+													</label>
+												</div>
 
-											<label class = "labelform" for="email">Email</label>
-											<input type="email" id="email" name="email" required />
+												<div class="form-group">
+													<label class="form-label" for="phone">
+														<span class="label-text">Phone (Optional)</span>
+														<input type="tel" id="phone" name="phone" placeholder="Enter your phone number" autocomplete="tel" />
+														<span class="focus-border"></span>
+													</label>
+												</div>
 
+												<div class="form-group">
+													<label class="form-label" for="message">
+														<span class="label-text">Message</span>
+														<textarea id="message" name="message" placeholder="Tell us about your project..." required rows="5"></textarea>
+														<span class="focus-border"></span>
+													</label>
+												</div>
 
-											<label class = "labelform" for="message">Message</label>
-											<textarea id="message" name="message" required></textarea>
-
-
-											<button class = "formbutton" type="submit">Send Message</button>
-										</form>
-										<div class="success" id="successMessage">Thank you! Your message has been sent.</div>
+												<button class="submit-btn" type="submit">
+													<span class="btn-text">Send Message</span>
+													<span class="btn-icon">→</span>
+												</button>
+											</form>
+											<div class="success-message" id="successMessage">
+												<span class="success-icon">✓</span>
+												<span>Thank you! Your message has been sent successfully.</span>
+											</div>
+										</div>
 									</section>
 
 							</div>
@@ -136,7 +164,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/submitform.js"></script>
 
 	</body>
 </html>
