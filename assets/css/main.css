@@ -2279,7 +2279,78 @@ input, select, textarea {
 		font-size: 1.3em;
 	}
 
-	.modern-form {
-		gap: 1.2em;
+		.modern-form {
+			gap: 1.2em;
+		}
+	}
+
+/* ========================================
+   Solutions Page Styles
+   ======================================== */
+
+/* Intro Text */
+.intro-text {
+	font-size: 1.15em;
+	line-height: 1.7em;
+	color: #5a6366;
+	margin-bottom: 2em;
+	max-width: 900px;
+}
+
+/* Solution Item */
+.solution-item {
+	margin-bottom: 2.5em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #e2e6e8;
+}
+
+.solution-item:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.solution-item h3 {
+	font-size: 1.5em;
+	color: #373f42;
+	margin-bottom: 0.75em;
+	font-weight: 400;
+}
+
+.solution-item p {
+	font-size: 1em;
+	line-height: 1.7em;
+	color: #474f51;
+	max-width: 900px;
+}
+
+/* Responsive adjustments for solutions */
+@media screen and (max-width: 980px) {
+	.intro-text {
+		font-size: 1.05em;
+	}
+
+	.solution-item h3 {
+		font-size: 1.3em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	.intro-text {
+		font-size: 1em;
+		margin-bottom: 1.5em;
+	}
+
+	.solution-item {
+		margin-bottom: 2em;
+		padding-bottom: 1.5em;
+	}
+
+	.solution-item h3 {
+		font-size: 1.2em;
+	}
+
+	.solution-item p {
+		font-size: 0.95em;
 	}
 }
