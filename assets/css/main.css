@@ -1464,10 +1464,50 @@ input, select, textarea {
 		outline: 0;
 	}
 
-		.bordered-feature-image img {
-			display: block;
-			width: 100%;
-		}
+	.bordered-feature-image img {
+		display: block;
+		width: 100%;
+	}
+
+/* Features section - equal image heights */
+#features .row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#features .row > [class*="col-"] {
+	display: flex;
+	flex-direction: column;
+}
+
+#features .row > [class*="col-"] section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#features .bordered-feature-image {
+	flex-shrink: 0;
+	height: 200px;
+	overflow: hidden;
+}
+
+#features .bordered-feature-image img {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* Responsive - revert on smaller screens */
+@media screen and (max-width: 1280px) {
+	#features .bordered-feature-image {
+		height: auto;
+	}
+
+	#features .bordered-feature-image img {
+		height: auto;
+	}
+}
 
 	.button-large {
 		background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
@@ -1567,7 +1607,8 @@ input, select, textarea {
 	}
 
 		#banner .bordered-feature-image {
-			margin-bottom: 0;
+			width: 75%;
+    		margin: auto;
 		}
 
 		#banner p {
@@ -2422,7 +2463,79 @@ input, select, textarea {
 		font-size: 1.2em;
 	}
 
-	.about-section p {
-		font-size: 0.95em;
+		.about-section p {
+			font-size: 0.95em;
+		}
+	}
+
+/* ========================================
+   Homepage Equal Height Columns
+   ======================================== */
+
+/* Remove underline from all anchor-wrapped elements in the three content boxes (match hover state) */
+#content .row.aln-center section a,
+#content .row.aln-center section a:hover {
+	text-decoration: none;
+}
+
+/* Make the three content boxes (Who We Are, What We Do, Customer Quotes) equal height */
+#content .row.aln-center {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+}
+
+#content .row.aln-center > [class*="col-"] {
+	display: flex;
+	flex-direction: column;
+}
+
+#content .row.aln-center > [class*="col-"] section {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+#content .row.aln-center > [class*="col-"] section .feature-image {
+	flex-shrink: 0;
+	width: 100%;
+}
+
+#content .row.aln-center > [class*="col-"] section .check-list,
+#content .row.aln-center > [class*="col-"] section .quote-list {
+	flex: 1;
+}
+
+/* Responsive - revert to normal on smaller screens */
+@media screen and (max-width: 980px) {
+	#content .row.aln-center {
+		display: block;
+	}
+
+	#content .row.aln-center > [class*="col-"] {
+		display: block;
+	}
+
+	#content .row.aln-center > [class*="col-"] section {
+		display: block;
+	}
+
+	/* Fix who-we-are image for smaller screens */
+	#content .feature-image {
+		overflow: hidden;
+		max-width: 300px
+	}
+
+	#content .feature-image img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	#content .feature-image {
+		width: 100%;
+		max-width: 300px
 	}
 }
