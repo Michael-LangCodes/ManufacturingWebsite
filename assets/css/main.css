@@ -1736,6 +1736,7 @@ input, select, textarea {
 
 		#copyright a {
 			color: #8d9ca3;
+			text-decoration: none;
 		}
 
 /* Large */
